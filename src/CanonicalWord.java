@@ -39,11 +39,13 @@ public class CanonicalWord implements Comparable<CanonicalWord> {
 		return chars;
 	}
 	
-	public void print(PrintStream out) {
-		for (char c : chars) {
-			out.print(c);
+	public void print(PrintStream out, boolean printCanonical) {
+		if (printCanonical) {
+			for (char c : chars) {
+				out.print(c);
+			}
+			out.println();
 		}
-		out.println();
 		for (String w : words) {
 			out.println(w);
 		}
